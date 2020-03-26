@@ -1,16 +1,23 @@
 # Easy-Smartcard
 Easy Smartcard v0.1 is small tool to communicate with smartr card, send and receive APDU to smart card
-
+ 
+ 1- install pyscard 1.9.9 this plugin its working with python 3.6 (in my case)
+ 2- install python 3.6
+ 
+ here is two option to work with gui, you  can direct load mainwindow.ui using (PyQt5.uic import loadUi) or convert .ui to .py
+ using pyuic -x mainwindow.ui -o mainwindow.py, the mainwindow.py.
+ both .ui, .py attached in this project.
+ 
 here is some script to test with EMV card ( VISA DEBIT)
 
 << 00 A4 04 00 06 A0 00 00 00 03 10
->>  (61 34)
+>> (61 34)
 
 << 00 C0 00 00 34
 >> 6F 32 84 07 A0 00 00 00 03 10 10 A5 27 50 0A 56 69 73 61 20 44 65 62 69 74 87 01 02 5F 2D 04 61 72 65 6E 9F 12 0A 56 69 73 61 20 44      65 62 69 74 9F 11 01 01 (90 00)
 
 << 80 A8 00 00 02 83 00    
->>  (61 10)
+>> (61 10)
 
 << 00 C0 00 00 10
 >> 80 0E 3C 00 08 02 03 00 10 01 01 00 10 02 03 01 (90 00)
